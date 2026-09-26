@@ -1,0 +1,49 @@
+site_name: Remote Sensing Lab
+site_url: https://example.com/
+
+theme:
+  name: material
+  logo: assets/icon_rs.png
+  palette:
+    # Dark / Light mode toggle
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections    # Group sidebar items into sections
+    - navigation.instant     # Single-page application navigation feel
+    - content.code.copy      # Copy button on code blocks
+
+nav:
+  - Home: index.md
+  - Software:
+    - Install ArcGIS Pro: software/arcgispro.md
+    - Install QGIS: software/qgis.md
+    - Install Python: software/python.md
+  - Data:
+    - "CDSE: Create account": data/file.md
+    - "CDSE: Download images": data/file.md
+    - "USGS/Landsat: ???": data/file.md
+  - Exercises:
+    - Lab 1: labs/lab1.md
+    - Lab 2: labs/lab2.md
+
+
+markdown_extensions:
+  - attr_list
+  - admonition
+
+
+extra_css:
+  - stylesheets/extra.css

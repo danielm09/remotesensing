@@ -1,0 +1,1526 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/labs/lab1/">
+      
+      
+        <link rel="prev" href="../../software/qgis/">
+      
+      
+        <link rel="next" href="../lab2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Lab 1 - Remote Sensing Lab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-1-class-3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Remote Sensing Lab" class="md-header__button md-logo" aria-label="Remote Sensing Lab" data-md-component="logo">
+      
+  <img src="../../assets/icon_rs.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Remote Sensing Lab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Remote Sensing Lab" class="md-nav__button md-logo" aria-label="Remote Sensing Lab" data-md-component="logo">
+      
+  <img src="../../assets/icon_rs.png" alt="logo">
+
+    </a>
+    Remote Sensing Lab
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/arcgispro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install ArcGIS Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/qgis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/python.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/file.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDSE: Create account
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/file.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDSE: Download images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/file.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    USGS/Landsat: ???
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lab-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-arcgis-pro-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure ArcGIS Pro Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-the-images-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect the images folder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-the-images-on-arcgis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open the images on ArcGIS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-image-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View image properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-the-image-histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute the image histogram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-composites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Composites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Composites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-composite-with-the-rgb-and-nir-bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a composite with the RGB and NIR bands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-composite-to-tif-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export composite to TIF file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-the-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modify the visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-false-color-composite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a False Color composite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectral-indices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spectral Indices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spectral Indices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compute-ndvi-arcgis-indices-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute NDVI (ArcGIS Indices tool)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-ndwi-band-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute NDWI (Band Arithmetic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lab-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Requirements
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Images
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure-arcgis-pro-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure ArcGIS Pro Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspect-the-images-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inspect the images folder
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-the-images-on-arcgis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open the images on ArcGIS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-image-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        View image properties
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compute-the-image-histogram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute the image histogram
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-composites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Composites
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Composites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-composite-with-the-rgb-and-nir-bands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a composite with the RGB and NIR bands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#export-composite-to-tif-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Export composite to TIF file
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modify-the-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modify the visualization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-false-color-composite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a False Color composite
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#spectral-indices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Spectral Indices
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Spectral Indices">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compute-ndvi-arcgis-indices-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute NDVI (ArcGIS Indices tool)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compute-ndwi-band-arithmetic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compute NDWI (Band Arithmetic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="./" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Exercises
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-1-class-3">Lab 1 (Class 3)</h1>
+<h2 id="lab-overview">Lab Overview</h2>
+<p>This practical session walks through the initial steps of image visualization, from opening images in a GIS software to creating color composites and mosaics.</p>
+<hr />
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>A GIS software of your choice (e.g. ArcGIS, QGIS)</li>
+<li>Download Class 3 materials<ul>
+<li>Link: Class_3</li>
+</ul>
+</li>
+</ul>
+<h2 id="download-images">Download Images</h2>
+<ol>
+<li>Download the “Class_3” materials from this link<ul>
+<li>Link: Class_3</li>
+</ul>
+</li>
+<li>Copy the “Images” folder to the RemoteSensing/Class_3 folder</li>
+</ol>
+<h2 id="configure-arcgis-pro-project">Configure ArcGIS Pro Project</h2>
+<ol>
+<li>Open ArcGIS Pro</li>
+<li>In the “New Project” menu, choose “Map”</li>
+<li>In the “New Project” window:<ul>
+<li>Name the project “Class_3”</li>
+<li>Check the “Create a folder for this local project” box</li>
+<li>Click on the folder icon on the right of the “Location” box</li>
+<li>Create a new folder named “RemoteSensing” for the course: right click &gt; folder</li>
+<li>Remember the location of this folder for future classes</li>
+<li>Select the “RemoteSensing” folder you have just created and click on “OK”</li>
+<li>Click on “OK” to create the project folder</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="inspect-the-images-folder">Inspect the images folder</h2>
+<p>The <strong>Images</strong> folder contains 4 images, each corresponding to a Sentinel-2 10m band:</p>
+<ul>
+<li><code>T29SMC_20260403T112109_B02_10m.jp2</code> → Band 2 (Blue)</li>
+<li><code>T29SMC_20260403T112109_B03_10m.jp2</code> → Band 3 (Green)</li>
+<li><code>T29SMC_20260403T112109_B04_10m.jp2</code> → Band 4 (Red)</li>
+<li><code>T29SMC_20260403T112109_B08_10m.jp2</code> → Band 8 (Near Infrared)</li>
+</ul>
+<h2 id="open-the-images-on-arcgis">Open the images on ArcGIS</h2>
+<ol>
+<li>Images can be opened by dragging and dropping</li>
+<li>Alternatively, add image from file<ul>
+<li>Catalog &gt; Folders &gt; Class_3 &gt; Images</li>
+<li>Add images to map: right click &gt; Add to Current Map</li>
+</ul>
+</li>
+<li>
+<p>Select “Yes” if ArcGIS Pro asks to calculate image statistics</p>
+<p><img alt="Load Images" src="../assets/lab1/load-images1.png" /></p>
+</li>
+</ol>
+<h2 id="view-image-properties">View image properties</h2>
+<ol>
+<li>Right click on some image in the “Contents” pane and select “Properties”</li>
+<li>In the menu on the left, select “Source”</li>
+<li>
+<p>Check image properties such as:</p>
+<ul>
+<li>Width</li>
+<li>Height</li>
+<li>Data type</li>
+<li>Compression type</li>
+<li>Coordinate Reference System</li>
+<li>Spatial Information</li>
+</ul>
+<p><img alt="Image Properties" src="../assets/lab1/image-properties.png" /></p>
+<details class="question">
+<summary>Question: What is the spatial resolution of this image?</summary>
+<p>Answer: 10 meters, as seen in the Cell Size X and Y fields.</p>
+</details>
+</li>
+<li>
+<p>Pan around the map and explore the image. Where on Earth is this image? Is it spatially coherent? Add a basemap to assess if the image is correctly georeferenced.</p>
+</li>
+<li>
+<p>Inspect pixel values by clicking on pixels on the map. Choose pixels at different locations and land cover types. Compare the values.</p>
+<p><img alt="Inspect Pixel" src="../assets/lab1/inspect-pixel.png" /></p>
+</li>
+</ol>
+<h2 id="compute-the-image-histogram">Compute the image histogram</h2>
+<p>A histogram is a chart that shows the distribution of pixel values across an image. It helps assess image contrast, spot anomalies or outliers and identify groups of pixels with similar values.
+<span style="color: red;">(check histogram section of the book to include better description of this last bit)</span></p>
+<ol>
+<li>Right click on the B08 image and select “Create Chart” &gt; “Histogram”</li>
+<li>In the “Variables” section, select “Band_1”. Wait for the histogram to be computed</li>
+<li>Evaluate the distribution of the histogram</li>
+</ol>
+<p><img alt="Histogram" src="../assets/lab1/histogram.png" /></p>
+<details class="question">
+<summary>Question: Based on the distribution seen at the B08 histogram, can you identify groups of pixels with similar values? What is their likely land cover types?</summary>
+<p>Yes. The first cluster (from 1,052 to 1,578) corresponds to water pixels, while the second cluster (from from 2,105 to 5,788) corresponds to land.</p>
+</details>
+<h2 id="create-composites">Create Composites</h2>
+<p>The images loaded on ArcGIS Pro correspond to Sentinel-2 Blue, Green, Red and Near Infrared bands, as shown in the table below. In this section, we are going to combine these bands into a single, multiband image. This multiband image is also called <strong>composite</strong>. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>Image</strong></th>
+<th style="text-align: left;"><strong>Band</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>T29SMC_20260403T112109_B02_10m</code></td>
+<td style="text-align: left;">Blue</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>T29SMC_20260403T112109_B03_10m</code></td>
+<td style="text-align: left;">Green</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>T29SMC_20260403T112109_B04_10m</code></td>
+<td style="text-align: left;">Red</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>T29SMC_20260403T112109_B08_10m</code></td>
+<td style="text-align: left;">Near Infrared (NIR)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="create-a-composite-with-the-rgb-and-nir-bands">Create a composite with the RGB and NIR bands</h3>
+<ol>
+<li>
+<p>In order to preserve the natural order of the bands, first we should organize the images in the “Contents” pane in the correct order. Change the order of the layers, so that Band 02 is at the top and B08 is at the bottom, as shown:</p>
+<p><img alt="Band Order" src="../assets/lab1/band-order.png" /></p>
+</li>
+<li>
+<p>Next, select the images (click + shift) in the “Contents” pane from top to bottom</p>
+</li>
+<li>In the “Imagery” tab, go to “Process” and select “Composite”</li>
+<li>The composite will be created and added to the “Contents” pane</li>
+</ol>
+<h3 id="export-composite-to-tif-file">Export composite to TIF file</h3>
+<div class="admonition note">
+<p class="admonition-title">GeoTIFF format</p>
+<p>The TIF (or GeoTIFF) format stores raster images along with geographic metadata, such as map projections, coordinates, and spatial resolution, allowing remote sensing data to be accurately located on Earth's surface.</p>
+<p>When exporting an image into a GeoTIFF file format, multiple settings can be defined, such as:</p>
+<ul>
+<li>Coordinate Reference System (e.g. EPSG:3736) </li>
+<li>Data type (e.g. Int16) </li>
+<li>Pixel size (e.g. 10 m)        </li>
+<li>NoData value (e.g. 65535)        </li>
+<li>Compression method (e.g. LZW, deflate)        </li>
+<li>Pyramids or overviews (lower-resolution copies of a raster image that enable fast panning and zooming)</li>
+</ul>
+</div>
+<ol>
+<li>Right click on the composite and select “Data” &gt; “Export Raster”</li>
+<li>In the “Output Raster Dataset”, change the file name to “Composite_uncompressed.tif”</li>
+<li>In the “General” tab, leave all settings as default. Make sure the “Compression Type” is set to “None”</li>
+<li>In the “Settings” tab, under the “Pyramids” section uncheck the “Build” box</li>
+<li>
+<p>Click “Export” to create the GeoTIFF file</p>
+<blockquote>
+<p>Navigate to the project folder and inspect the files that were created. Note that the “Composite_uncompressed.tif” has approximately 946 MB. You can also pan and zoom in/out on the map to assess the composite's renderization speed.</p>
+</blockquote>
+</li>
+<li>
+<p>Now let’s export the composite again, but this time with the following settings:</p>
+<ul>
+<li>“Output Raster Dataset”: “Composite.tif”</li>
+<li>“Compression Type”: LZW</li>
+<li>“Pyramids”: check the “Build” box (leave the parameters at their default values)</li>
+</ul>
+</li>
+<li>
+<p>Export the composite with these new settings</p>
+<blockquote>
+<p>Navigate again to the project folder. Check the files that were created. The “Composite.tif.ovr” is the pyramids file, which contains downsampled copies of the composite that allow faster renderization when zooming in/out. Also, note that the “Composite.tif” has approximately 637 MB, a reduction of ~300 MB due to compression. Always compress rasters to save disk space.</p>
+</blockquote>
+</li>
+<li>
+<p>Compare the visualization of both exported composites</p>
+</li>
+<li>Remove the “Composite_uncompressed.tif” layer from ArcGIS and delete the file from the project folder</li>
+</ol>
+<p><span style="color: red;">!!!!!!!!!!!!1 ps: try to show the pyramids visualization app/video !!!!!!!!!!!!! </span></p>
+<h3 id="modify-the-visualization">Modify the visualization</h3>
+<p>GIS software typically display multiband imagery using an RGB renderer. By default, the red, green, and blue channels are mapped sequentially to the first three bands of the raster (Red: Band 1, Green: Band 2, Blue: Band 3).</p>
+<div class="admonition question">
+<p class="admonition-title">Inspect the image. Do the colors look correct?</p>
+</div>
+<p>Change the symbology to match the bands to the correct channels.</p>
+<ul>
+<li>Right click on the composite layer and select “Symbology”</li>
+<li>
+<p>Change the symbology to:</p>
+<p>Red → Band_3 | Green → Band_2 | Blue → Band_1</p>
+<p><img alt="Symbology TC" src="../assets/lab1/symbology-true-color.png" /></p>
+<blockquote>
+<p>Note that the band numbers do not correspond to the Sentinel-2 band numbers anymore, as this is a custom, new composite</p>
+</blockquote>
+</li>
+</ul>
+<p>Inspect the image on the map again and validate if the new symbology is correct.</p>
+<p>In the “Symbology” tab, experiment with different contrast configurations.</p>
+<p><span style="color: red;"><strong>Add a text explaining how stretching and contrast work.</strong> !!!!!!!!!!!!!!1</span></p>
+<ul>
+<li>In the “Stretch type” option, select “None”. With this option, no stretch is applied and the image looks darker</li>
+<li>Play with other stretch types. Change the “Min” and “Max” values in the “Percent clip” option. Choose the configuration that looks the best to you</li>
+</ul>
+<h3 id="create-a-false-color-composite">Create a False Color composite</h3>
+<p>A visualization that has the RGB channels assigned to the respective RGB bands is called a <strong>True Color</strong> composite. However, we can map the RGB channels to different bands in order to highlight some characteristics of the landscape that are invisible to the human eye. This type of visualization is called <strong>False Color</strong> composite.</p>
+<p>To create a NIR false color composite to highlight vegetation, map the RGB channels to the NIR, Red and Green bands (in that order)</p>
+<p><img alt="Symbology FC" src="../assets/lab1/symbology-false-color.png" /></p>
+<p>This false color composite highlights vegetation in different shades of red and is used to assess plant density and health. Healthy vegetation appear in vibrant shades of red, as they reflect near-infrared and green light and absorb red light. Denser vegetation, such as forests, tend to appear in darker red. Brown color can indicate stressed vegetation, while black may correspond to burned areas.</p>
+<h2 id="spectral-indices">Spectral Indices</h2>
+<p>Spectral indices are mathematical formulas combining two or more spectral bands to isolate, highlight, and quantify specific land cover properties such as vegetation health, water bodies, or soil moisture in remote sensing imagery. Commonly used spectral indices are shown in the table below.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Index</strong></th>
+<th><strong>Formula</strong></th>
+<th><strong>Use Case</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normalized Difference Vegetation Index</td>
+<td><span class="arithmatex">\(NDVI = \frac{(NIR- RED)}{(NIR + RED)}\)</span></td>
+<td>Measuring green vegetation density and overall plant health</td>
+</tr>
+<tr>
+<td>Normalized Difference Built-up Index</td>
+<td><span class="arithmatex">\(NDBI = \frac{(SWIR - NIR)}{(SWIR + NIR)}\)</span></td>
+<td>Identifying urban areas and impervious built surfaces</td>
+</tr>
+<tr>
+<td>Normalized Difference Water Index</td>
+<td><span class="arithmatex">\(NDWI = \frac{(GREEN - NIR)}{(GREEN + NIR)}\)</span></td>
+<td>Delineating open water bodies and tracking changes in surface water extent</td>
+</tr>
+<tr>
+<td>Normalized Burn Ratio</td>
+<td><span class="arithmatex">\(NBR = \frac{(NIR - SWIR)}{(NIR + SWIR)}\)</span></td>
+<td>Assessing burn severity and ecosystem recovery in post-fire landscapes</td>
+</tr>
+<tr>
+<td>Enhanced Vegetation Index</td>
+<td><span class="arithmatex">\(EVI = 2.5 * \frac{(NIR - RED)}{(NIR + 6*RED - 7.5*BLUE + 1)}\)</span></td>
+<td>Quantifying vegetation canopy structure and health in high-biomass regions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="compute-ndvi-arcgis-indices-tool">Compute NDVI (ArcGIS Indices tool)</h3>
+<p>ArcGIS Pro offers a an easy tool to compute a range of pre-selected spectral indices. We are going to use this tool to compute the NDVI.</p>
+<ol>
+<li>Select the "Composite.tif" in the Contents pane</li>
+<li>In the "Imagery" tab, go to "Indices" and select "NDVI"</li>
+<li>In the prompted window, set:<ul>
+<li>"Near Infrared Band Index" to "4 - Band_4" </li>
+<li>"Red Band Index" to "3 - Band_3"</li>
+</ul>
+</li>
+<li>Press "OK". ArcGIS Pro will plug the corresponding bands into the NDVI formula and compute the index</li>
+<li>(Optional) Change the symbology to a scale of green. "Symbology" &gt; "Color scheme" &gt; "Green Bright"</li>
+</ol>
+<p><img alt="NDVI Map" src="../assets/lab1/ndvi.png" /></p>
+<details class="question">
+<summary>What is the range of NDVI values?</summary>
+<p>NDVI values range from -1 to 1. To match the Sentinel-2 16-bit integer data type and band scaling, multiply the calculated NDVI by 10,000.</p>
+</details>
+<p>In an NDVI map, vegetation pixels tend to have higher values, while soil and built-up have lower values. Water often has negative NDVI values. Using a white-green color scale means that vegetation will appear in stronger green, while the other land cover types will appear light green.</p>
+<h3 id="compute-ndwi-band-arithmetic">Compute NDWI (Band Arithmetic)</h3>
+<p>This is an agnostic tool that allows computing custom indices by defining their formula.</p>
+<ol>
+<li>In the "Imagery" tab, select "Raster Functions"</li>
+<li>Look for the "Math" group and select "Band Arithmetic"</li>
+<li>In the "Raster" field, select the "Composite.tif"</li>
+<li>In "Method", select "User Defined"</li>
+<li>In band indexes, enter the formula of the NDWI index: <code>(B2 - B4)/(B2 + B4)</code></li>
+<li>(Optinal) Change the symbology to a scale of blue. <ul>
+<li>"Symbology" &gt; "Color scheme" &gt; "Bathymetry #2" &gt; Check the "Invert" box</li>
+</ul>
+</li>
+</ol>
+<p><img alt="NDVI Map" src="../assets/lab1/ndwi.png" /></p>
+<p>The NDWI highlights open water features and vegetation water content (high NDWI values).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "content.code.copy", "toc.follow", "navigation.top", "content.code.copy", "content.tabs.link", "navigation.path"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

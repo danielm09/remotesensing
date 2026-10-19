@@ -24,6 +24,11 @@ theme:
     - navigation.sections    # Group sidebar items into sections
     - navigation.instant     # Single-page application navigation feel
     - content.code.copy      # Copy button on code blocks
+    - toc.follow
+    - navigation.top
+    - content.code.copy
+    - content.tabs.link
+    - navigation.path
 
 nav:
   - Home: index.md
@@ -43,7 +48,20 @@ nav:
 markdown_extensions:
   - attr_list
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - toc:
+      permalink: false
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.tabbed:
+      alternate_style: true
 
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js

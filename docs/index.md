@@ -1,6 +1,6 @@
 # Remote Sensing Lab
 
-Welcome to the central repository for the practical Lab exercises of the **Remote Sensing 200409** course at [Nova IMS](https://novaims.unl.pt).
+Welcome to the central repository for the practical Lab exercises of the **Remote Sensing 200409** course of the Master's in Geospatial Technologies from [Nova IMS](https://novaims.unl.pt).
 
 This portal provides all the hands-on guides, datasets, and step-by-step instructions required to complete the laboratory sessions throughout the semester.
 

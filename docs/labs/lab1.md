@@ -8,28 +8,27 @@ This practical session walks through the initial steps of image visualization, f
 
 ## Requirements
 
-- A GIS software of your choice (e.g. ArcGIS, QGIS)
-- Download Class 3 materials
-    - Link: Class_3
+- Software: ArcGIS Pro ([installation instructions](/software/arcgispro))
+- Download [Lab 1 materials](https://liveeduisegiunl-my.sharepoint.com/:f:/g/personal/dmoraes_novaims_unl_pt/IgBDtZ4KQHoiSKZa7MNO99oyAeCGmwTEzOwbiw53tMEEh2k)
 
-## Download Images
-
-1. Download the “Class_3” materials from this link
-    - Link: Class_3
-2. Copy the “Images” folder to the RemoteSensing/Class_3 folder
 
 ## Configure ArcGIS Pro Project
 
 1. Open ArcGIS Pro
 2. In the “New Project” menu, choose “Map”
 3. In the “New Project” window:
-    - Name the project “Class_3”
+    - Name the project “Lab_1”
     - Check the “Create a folder for this local project” box
     - Click on the folder icon on the right of the “Location” box
     - Create a new folder named “RemoteSensing” for the course: right click > folder
     - Remember the location of this folder for future classes
     - Select the “RemoteSensing” folder you have just created and click on “OK”
     - Click on “OK” to create the project folder
+
+## Copy Images folder
+
+1. Navigate to the folder where the Lab 1 materials were downloaded
+2. Copy the “Images” folder to the `RemoteSensing/Lab_1` folder
 
 ---
 
@@ -44,11 +43,11 @@ The **Images** folder contains 4 images, each corresponding to a Sentinel-2 10m 
 - `T29SMC_20260403T112109_B08_10m.jp2` → Band 8 (Near Infrared)
 
 
-## Open the images on ArcGIS
+## Open images on ArcGIS
 
 1. Images can be opened by dragging and dropping
 2. Alternatively, add image from file
-    - Catalog > Folders > Class_3 > Images
+    - Catalog > Folders > Lab_1 > Images
     - Add images to map: right click > Add to Current Map
 3. Select “Yes” if ArcGIS Pro asks to calculate image statistics
 
@@ -83,7 +82,6 @@ The **Images** folder contains 4 images, each corresponding to a Sentinel-2 10m 
 ## Compute the image histogram
     
 A histogram is a chart that shows the distribution of pixel values across an image. It helps assess image contrast, spot anomalies or outliers and identify groups of pixels with similar values.
-<span style="color: red;">(check histogram section of the book to include better description of this last bit)</span>
 
 1. Right click on the B08 image and select “Create Chart” > “Histogram”
 2. In the “Variables” section, select “Band_1”. Wait for the histogram to be computed
@@ -119,7 +117,7 @@ The images loaded on ArcGIS Pro correspond to Sentinel-2 Blue, Green, Red and Ne
 
 ### Export composite to TIF file
     
-!!! note "GeoTIFF format"
+??? note "GeoTIFF format"
 
     The TIF (or GeoTIFF) format stores raster images along with geographic metadata, such as map projections, coordinates, and spatial resolution, allowing remote sensing data to be accurately located on Earth's surface.
     
@@ -133,7 +131,7 @@ The images loaded on ArcGIS Pro correspond to Sentinel-2 Blue, Green, Red and Ne
     - Pyramids or overviews (lower-resolution copies of a raster image that enable fast panning and zooming)
 
 1. Right click on the composite and select “Data” > “Export Raster”
-2. In the “Output Raster Dataset”, change the file name to “Composite_uncompressed.tif”
+2. In the “Output Raster Dataset” field, change the file name to “Composite_uncompressed.tif”
 3. In the “General” tab, leave all settings as default. Make sure the “Compression Type” is set to “None”
 4. In the “Settings” tab, under the “Pyramids” section uncheck the “Build” box
 5. Click “Export” to create the GeoTIFF file
@@ -151,7 +149,28 @@ The images loaded on ArcGIS Pro correspond to Sentinel-2 Blue, Green, Red and Ne
 8. Compare the visualization of both exported composites
 9. Remove the “Composite_uncompressed.tif” layer from ArcGIS and delete the file from the project folder
 
-<span style="color: red;">!!!!!!!!!!!!1 ps: try to show the pyramids visualization app/video !!!!!!!!!!!!! </span>
+??? note "Image Compression"
+
+    Compression consists of enconding information using fewer bits than the original representation. It allows storing data more efficiently, reducing file size. There are two main types of compression: **lossless** and **lossy**.
+
+    Lossy compression reduces file size by removing part of the original data. It is typically employed in use cases that can afford some information loss, such as image visualization. Lossy compression can provide higher compression rates and smaller file sizes.
+
+    Lossless compression reduces file size by restructuring image data without discarding any information. No data is lost in the process. Losslesss compression is typically used when information loss is not acceptable. It provides lower compression rates compared to lossy compression.
+
+    | Feature | Lossless | Lossy |
+    | :--- | :--- | :--- |
+    | **Data loss** | No | Yes |
+    | **Reversibility** | Fully reversible; the original image can be reconstructed without any data loss. | Irreversible; data is permanently discarded, making exact original reconstruction impossible. |
+    | **Compression Rates** | Lower | Higher |
+    | **Key Algorithms** | LZW, LZ77 / Deflate | Discrete Cosine Transform (DCT), Discrete Wavelet Transform (DWT), Quantization |
+    | **Common Formats** | GeoTiff, PNG | JPEG, WebP (lossy) |
+    | **Use Cases** | Quantitative Analysis, Numerical Modeling | Imagery Visualization, Image Previewing |
+
+??? note "Pyramids"
+
+    Pyramids (overviews) in a GeoTIFF are progressively lower-resolution copies of the image, each typically half the width and height of the previous one, that let software display the data quickly at zoomed-out scales without reading every full-resolution pixel.
+
+    ![Pyramids](assets/lab1/geotiff_pyramids.svg)
 
 ### Modify the visualization
     
@@ -175,8 +194,6 @@ Inspect the image on the map again and validate if the new symbology is correct.
 
 In the “Symbology” tab, experiment with different contrast configurations.
     
-<span style="color: red;">**Add a text explaining how stretching and contrast work.** !!!!!!!!!!!!!!1</span>
-
 - In the “Stretch type” option, select “None”. With this option, no stretch is applied and the image looks darker
 - Play with other stretch types. Change the “Min” and “Max” values in the “Percent clip” option. Choose the configuration that looks the best to you
 
@@ -189,7 +206,7 @@ To create a NIR false color composite to highlight vegetation, map the RGB chann
 ![Symbology FC](assets/lab1/symbology-false-color.png)
         
 
-This false color composite highlights vegetation in different shades of red and is used to assess plant density and health. Healthy vegetation appear in vibrant shades of red, as they reflect near-infrared and green light and absorb red light. Denser vegetation, such as forests, tend to appear in darker red. Brown color can indicate stressed vegetation, while black may correspond to burned areas.
+This false color composite highlights vegetation in different shades of red and is used to assess plant density and health. Healthy vegetation appears in vibrant shades of red, as they reflect near-infrared and green light and absorb red light. Denser vegetation, such as forests, tend to appear in darker red. Brown color can indicate stressed vegetation, while black may correspond to burned areas.
     
 
 ## Spectral Indices
@@ -240,3 +257,16 @@ This is an agnostic tool that allows computing custom indices by defining their 
 
 
 The NDWI highlights open water features and vegetation water content (high NDWI values).
+
+
+## Exercise
+
+Major forest fires occurred in the Center of Portugal in the Summer of 2025.
+
+Use the Sentinel-2 images from August, 23 2025 available in the `Exercise` folder to identify burned areas.
+
+- Create a multiband composite with the available bands (*note that the SWIR band has a different spatial resolution. Take the necessary steps to harmonized the bands*)
+- Compute the NDVI. Try to identify the burned areas.
+- Compute the NBR. Try to identify the burned areas. Compare it with NDVI: which is better?
+- Identify a threshold and create a binary map that distinguishes burned from unburned areas
+- Use the burned areas polygons (`burned_areas_2025.shp`) obtained from official ICNF data to evaluate your results 

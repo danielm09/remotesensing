@@ -37,12 +37,12 @@ nav:
     - Install QGIS: software/qgis.md
     - Install Python: software/python.md
   - Data:
-    - "CDSE: Create account": data/file.md
-    - "CDSE: Download images": data/file.md
-    - "USGS/Landsat: ???": data/file.md
+    - "CDSE: Create account": data/CDSE_account.md
+    - "CDSE: Download images": data/CDSE_browser.md
+    #- "USGS/Landsat: ???": data/file.md
   - Exercises:
     - Lab 1: labs/lab1.md
-    - Lab 2: labs/lab2.md
+    #- Lab 2: labs/lab2.md
 
 
 markdown_extensions:
@@ -58,6 +58,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 
+plugins:
+   - glightbox
 
 extra_css:
   - stylesheets/extra.css

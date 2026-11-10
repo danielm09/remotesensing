@@ -5,9 +5,7 @@ Welcome to the central repository for the practical Lab exercises of the **Remot
 This portal provides all the hands-on guides, datasets, and step-by-step instructions required to complete the laboratory sessions throughout the semester.
 
 
-![logo-rs-novaims](assets/logo_rs_novaims.svg){: style="display: block; margin: 0 auto;" width="60%" }
-
-
+![logo-rs-novaims](assets/logo_rs_novaims.svg){.off-glb style="display: block; margin: 0 auto;" width="60%"}
 
 
 *Course instructor and Lab material developer and maintainer: Prof. Daniel Moraes*

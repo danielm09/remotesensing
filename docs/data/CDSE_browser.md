@@ -5,15 +5,27 @@ The [Copernicus Browser](https://browser.dataspace.copernicus.eu/) is the main w
 
 The [CDSE Browser](https://browser.dataspace.copernicus.eu/) is free to use, you just need to be logged in to start using it.
 
+![explorer](assets/cdse_explorer.png)
+
 ### Visualize Data
 
 The sidebar on the left is where you set the parameters for searching, visualizing and downloading data. 
 
 The VISUALIZE tab displays satellite imagery on the map. 
 
-- First, zoom in to your area of interest, either with the mouse wheel or the location search in the upper right corner. You can also draw or upload a polygon containing you area of interest
-- Then pick a date and a data collection (Sentinel-2 L2A is a good starting point for optical imagery) and choose a visualization such as True Color, False Color or a vegetation index like NDVI 
+- First, zoom in to your area of interest, either with the mouse wheel or the location search in the upper right corner. You can also draw or upload a polygon defining you area of interest
+- Then pick a date and a data collection (e.g. Sentinel-2 L2A). When using the single date option, the calendar will show only the dates with images available. 
+- Choose a visualization such as True Color, False Color or a vegetation index like NDVI 
 - You can filter by cloud cover, compare dates side by side, and create timelapses directly in the Browser
+
+
+### Search
+
+Alternatively, you can use the SEARCH tab to search for products.
+
+- Select a data source (e.g. Sentinel-2 L2A)
+- Define a time range by selecting a start and end date
+- Click on Search to see the retrieved products
 
 
 ### Download Data

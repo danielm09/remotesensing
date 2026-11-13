@@ -201,7 +201,7 @@ In the “Symbology” tab, experiment with different contrast configurations.
     
 A visualization that has the RGB channels assigned to the respective RGB bands is called a **True Color** composite. However, we can map the RGB channels to different bands in order to highlight some characteristics of the landscape that are invisible to the human eye. This type of visualization is called **False Color** composite.
 
-To create a NIR false color composite to highlight vegetation, map the RGB channels to the NIR, Red and Green bands (in that order)
+To create a NIR false color composite to highlight vegetation, map the RGB channels to the NIR, Red and Green bands (in that order).
     
 ![Symbology FC](assets/lab1/symbology-false-color.png)
         
@@ -223,7 +223,7 @@ Spectral indices are mathematical formulas combining two or more spectral bands 
 
 ### Compute NDVI (ArcGIS Indices tool)
 
-ArcGIS Pro offers a an easy tool to compute a range of pre-selected spectral indices. We are going to use this tool to compute the NDVI.
+ArcGIS Pro offers an easy tool to compute a range of pre-selected spectral indices. We are going to use this tool to compute the NDVI.
 
 1. Select the "Composite.tif" in the Contents pane
 2. In the "Imagery" tab, go to "Indices" and select "NDVI"

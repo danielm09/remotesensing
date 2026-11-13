@@ -1,0 +1,8 @@
+/* Hide dark-mode logo by default (light mode) */
+.logo-dark {
+  display: none;
+}
+
+[data-md-color-scheme="slate"] img[alt="logo-rs-novaims"] {
+  filter: brightness(0) invert(1);
+}

@@ -269,7 +269,7 @@ The temporal composite should have the following bands:
 - Band 5: Blue (Winter image)
 - Band 6: Green (Winter image)
 - Band 7: Red (Winter image)
-- Band 8: (Winter image)
+- Band 8: NIR (Winter image)
 
 Export the composite as `Composite_temporal.tif`.
 

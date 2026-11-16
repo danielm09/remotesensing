@@ -6,3 +6,22 @@
 [data-md-color-scheme="slate"] img[alt="logo-rs-novaims"] {
   filter: brightness(0) invert(1);
 }
+
+
+mark.red {
+  background-color: #ffcccc;
+  color: #990000;
+  font-weight: bold;
+}
+
+mark.green {
+  background-color: #ffffff00;
+  color: #009100;
+  font-weight: bold;
+}
+
+mark.blue {
+  background-color: #ffffff00;
+  color: #3777FF;
+  font-weight: bold;
+}

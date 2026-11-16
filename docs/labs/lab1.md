@@ -269,4 +269,10 @@ Use the Sentinel-2 images from August, 23 2025 available in the `Exercise` folde
 - Compute the NDVI. Try to identify the burned areas.
 - Compute the NBR. Try to identify the burned areas. Compare it with NDVI: which is better?
 - Identify a threshold and create a binary map that distinguishes burned from unburned areas
-- Use the burned areas polygons (`burned_areas_2025.shp`) obtained from official ICNF data to evaluate your results 
+- Use the burned areas polygons (`burned_areas_2025.shp`) obtained from official ICNF data to evaluate your results
+
+
+<br><br>
+
+
+:medal: ==Congratulations, you reached the end of Lab 1.=={.green}

@@ -42,14 +42,16 @@ nav:
     #- "USGS/Landsat: ???": data/file.md
   - Exercises:
     - Lab 1: labs/lab1.md
-    #- Lab 2: labs/lab2.md
+    - Lab 2: labs/lab2.md
 
 
 markdown_extensions:
   - attr_list
+  - pymdownx.mark
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.blocks.caption
   - tables
   - toc:
       permalink: false
@@ -57,9 +59,13 @@ markdown_extensions:
       generic: true
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
-   - glightbox
+   - glightbox:
+      auto_caption: true
 
 extra_css:
   - stylesheets/extra.css

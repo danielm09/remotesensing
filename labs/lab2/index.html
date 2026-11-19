@@ -1,0 +1,1426 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/labs/lab2/">
+      
+      
+        <link rel="prev" href="../lab1/">
+      
+      
+        <link rel="next" href="../lab3/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Lab 2 - Remote Sensing Lab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-2-class-5" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Remote Sensing Lab" class="md-header__button md-logo" aria-label="Remote Sensing Lab" data-md-component="logo">
+      
+  <img src="../../assets/icon_rs.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Remote Sensing Lab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Remote Sensing Lab" class="md-nav__button md-logo" aria-label="Remote Sensing Lab" data-md-component="logo">
+      
+  <img src="../../assets/icon_rs.png" alt="logo">
+
+    </a>
+    Remote Sensing Lab
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/arcgispro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install ArcGIS Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/qgis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/CDSE_account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDSE: Create account
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/CDSE_browser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDSE: Download images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lab-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-arcgis-pro-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create ArcGIS Pro Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-download-sentinel-2-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1 - Download Sentinel-2 data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1 - Download Sentinel-2 data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sentinel-2-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sentinel-2 Products
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-pre-processing-sentinel-2-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 - Pre-processing Sentinel-2 images
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2 - Pre-processing Sentinel-2 images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-cloud-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Cloud Mask
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Gaps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 - Feature Engineering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3 - Feature Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseline-composite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline Composite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ndvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NDVI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lab-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-arcgis-pro-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create ArcGIS Pro Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-download-sentinel-2-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 1 - Download Sentinel-2 data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1 - Download Sentinel-2 data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sentinel-2-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sentinel-2 Products
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-pre-processing-sentinel-2-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 2 - Pre-processing Sentinel-2 images
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2 - Pre-processing Sentinel-2 images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-cloud-mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create Cloud Mask
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fill-gaps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fill Gaps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-feature-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Part 3 - Feature Engineering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 3 - Feature Engineering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#baseline-composite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Baseline Composite
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ndvi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NDVI
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../lab1/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Exercises
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-2-class-5">Lab 2 (Class 5)</h1>
+<h2 id="lab-overview">Lab Overview</h2>
+<p>In this Lab, you will learn how to acquire and preprocess Sentinel-2 imagery, as well as prepare the composites that will be used in Lab 3.</p>
+<p>This practical session is divided into 3 parts:</p>
+<ul>
+<li><strong>Part 1</strong>: Download Sentinel-2 data from CDSE</li>
+<li><strong>Part 2</strong>: Pre-processing Sentinel-2 images</li>
+<li><strong>Part 3</strong>: Feature Engineering</li>
+</ul>
+<hr>
+<h2 id="create-arcgis-pro-project">Create ArcGIS Pro Project</h2>
+<p>Using the folder structure set up in Lab 1, create a <em>New Project</em> named <code>Lab_2</code> inside the <code>RemoteSensing</code> folder.</p>
+<h2 id="download-materials">Download Materials</h2>
+<ul>
+<li>Download the <code>study_area.kml</code> file available in the <a href="https://liveeduisegiunl-my.sharepoint.com/:f:/g/personal/dmoraes_novaims_unl_pt/IgAiLoSqW8GJTZRzvG1ohN1_AUPwgOw8yemcbq3TDRsodd0?e=n1TSBb">Lab_2 materials</a> folder</li>
+<li>Copy <code>study_area.kml</code> to the <code>Lab_2</code> folder created above</li>
+</ul>
+<blockquote>
+<p>Note: In Part 1, you will download the Sentinel-2 images directly from CDSE. If you run into download issues, backup copies are available in the Lab_2 materials folder.</p>
+</blockquote>
+<hr>
+<h2 id="part-1-download-sentinel-2-data">Part 1 - Download Sentinel-2 data</h2>
+<p>In this first part of the Lab, we are going to download Sentinel-2 images from the Copernicus Data Space Ecosystem (CDSE). Before starting, make sure you have created a CDSE account (<a href="../../data/CDSE_account/">instructions here</a>).</p>
+<p>We are going to download Sentinel-2 L2A images from <code>27/06/2026</code> and <code>29/06/2026</code>. </p>
+<ol>
+<li>Open the <a href="https://browser.dataspace.copernicus.eu">CDSE browser</a></li>
+<li>Log in with your credentials</li>
+<li>Define an area of interest by uploading a kml file. Click on the <mark class="blue">Create an area of interest</mark> icon in the top-right corner and select <mark class="blue">Define Area of Interest (AOI)</mark>. Then, in the <mark class="blue">File</mark> tab, browse to the <code>Lab_2</code> folder in your PC and select the <code>study_area.kml</code> file</li>
+<li>In the menu on the left, change the <mark class="blue">DATE</mark> from <mark class="blue">Single Date</mark> to <mark class="blue">Time Range</mark></li>
+<li>In the date range, set the starting date (<mark class="blue">From</mark>) to <code>27/06/2026</code> at <code>00:00</code> and the end date (<mark class="blue">Until</mark>) to <code>29/06/2026</code> at <code>23:59</code>.</li>
+<li>The <mark class="blue">Max. cloud coverage</mark> parameter limits the percentage of clouds in an image. Leave this parameter at <code>30%</code></li>
+<li>In the <mark class="blue">DATA COLLECTIONS</mark> section, make sure to select <code>Sentinel-2 L2A</code></li>
+<li>
+<p>Click on <mark class="blue">Find products within selected time range</mark> to retrieve the available images</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab2/cdse_browser_1.png" data-title="CDSE Browser 1" data-desc-position="bottom"><img alt="CDSE Browser 1" src="../assets/lab2/cdse_browser_1.png"></a></p>
+</li>
+<li>
+<p>Click on the <mark class="blue">Download product</mark> icon to download the two images that cover the entire tile (approx. 1.1GB each). Do not download the product has a partial cover of the tile</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab2/cdse_browser_2.png" data-title="CDSE Browser 1" data-desc-position="bottom"><img alt="CDSE Browser 1" src="../assets/lab2/cdse_browser_2.png"></a></p>
+</li>
+</ol>
+<p>Wait for the download, then copy and extract the downloaded contents to your <code>Lab_2</code> folder.</p>
+<h3 id="sentinel-2-products">Sentinel-2 Products</h3>
+<p>Inspect the product folder. Sentinel-2 products follow a naming convention and are distributed in the SAFE (Standard Archive Format for Europe), which is a structured folder hierarchy that contains imagery, metadata and other auxiliary data.</p>
+<p>The images are in the <code>IMG_DATA</code> folder, inside the <code>GRANULE</code> directory.</p>
+<details class="note">
+<summary>Sentinel-2 Product Naming Convention</summary>
+<p><code>MMM_MSIXXX_YYYYMMDDHHMMSS_Nxxyy_ROOO_Txxxxx_YYYYMMDDHHMMSS.SAFE</code></p>
+<p>(Example: <code>S2B_MSIL2A_20250514T112119_N0511_R037_T29SMC_20250514T142031.SAFE</code>)</p>
+<ul>
+<li><strong><code>MMM</code></strong> (<code>S2B</code>): Mission identifier (<code>S2A</code>, <code>S2B</code>, or <code>S2C</code>).</li>
+<li><strong><code>MSIXXX</code></strong> (<code>MSIL2A</code>): Instrument (Multispectral Instrument) and processing level—typically <strong><code>MSIL1C</code></strong> (Top-of-Atmosphere reflectance) or <strong><code>MSIL2A</code></strong> (Bottom-of-Atmosphere surface reflectance).</li>
+<li><strong><code>YYYYMMDDHHMMSS</code></strong> (<code>20250514T112119</code>): Sensing start date and time (UTC) when the satellite acquired the image.</li>
+<li><strong><code>Nxxyy</code></strong> (<code>N0511</code>): Processing baseline number (version of the processing software/algorithms used, e.g., <code>05.11</code>).</li>
+<li><strong><code>ROOO</code></strong> (<code>R037</code>): Relative orbit number (<code>R001</code> to <code>R143</code>).</li>
+<li><strong><code>Txxxxx</code></strong> (<code>T29SMC</code>): Tile identifier based on the Military Grid Reference System (MGRS), indicating the 110 x 110 km geographic tile.</li>
+<li><strong><code>YYYYMMDDHHMMSS</code></strong> (<code>20250514T142031</code>): Product generation/creation date and time.</li>
+</ul>
+</details>
+<details class="note">
+<summary>Sentinel-2 Product Folder Structure (SAFE)</summary>
+<p>Inside the top-level <code>.SAFE</code> directory, the data is organized into a standardized hierarchy:</p>
+<ul>
+<li>
+<p><strong><code>GRANULE/</code></strong>: The main folder you will work with. It contains a subfolder for the specific tile, which holds:</p>
+<ul>
+<li><strong><code>IMG_DATA/</code></strong>: The actual spectral band images in <strong>JPEG2000 (<code>.jp2</code>)</strong> format. For <strong>Level-2A</strong> products, this is further split into resolution subfolders (<strong><code>R10m</code></strong>, <strong><code>R20m</code></strong>, and <strong><code>R60m</code></strong>) along with a True Color Image (<code>TCI</code>) and Scene Classification Layer (<code>SCL</code>).</li>
+<li><strong><code>QI_DATA/</code></strong>: Quality indicators, including cloud masks, snow/ice probabilities, and technical quality reports.</li>
+<li><strong><code>MTD_TL.xml</code></strong>: Tile-level metadata (e.g., sun/viewing angles, cloud cover percentage).</li>
+</ul>
+</li>
+<li>
+<p><strong><code>DATASTRIP/</code></strong>: Metadata and auxiliary information for the entire continuous orbital strip from which the tile was cut.</p>
+</li>
+<li><strong><code>AUX_DATA/</code></strong>: Auxiliary files used during processing (such as meteorological or elevation data).</li>
+<li><strong><code>MTD_MSIL1C.xml</code></strong> / <strong><code>MTD_MSIL2A.xml</code></strong>: The main product metadata file describing the overall acquisition, band parameters, and quantification values.</li>
+<li><strong><code>manifest.safe</code></strong>: An XML index file listing all files and components inside the <code>.SAFE</code> package.</li>
+<li><strong><code>HTML/</code></strong> &amp; <strong><code>rep_info/</code></strong>: Quick-look previews and XML schema definitions used to validate the product structure.</li>
+</ul>
+</details>
+<h2 id="part-2-pre-processing-sentinel-2-images">Part 2 - Pre-processing Sentinel-2 images</h2>
+<p>The image of the first date (27/06/2026) contains clouds, hiding spectral information of parts of the terrain. In this second part, we are going to mask the clouds in this image and use the image of the second date (29/06/2026) to fill the gaps.</p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab2/diagram.png" data-title="Workflow Cloud Masking" data-desc-position="bottom"><img alt="Workflow Cloud Masking" src="../assets/lab2/diagram.png"></a></p>
+<figcaption>
+<p>Overview of the cloud masking and gap filling process. </p>
+</figcaption>
+</figure>
+<h3 id="create-cloud-mask">Create Cloud Mask</h3>
+<ol>
+<li>Load the Bands B2, B3, B4 and B8 (10m) from the first date (27/06/2026) in ArcGIS</li>
+<li>
+<p>Create a multiband composite (<mark class="blue">Imagery</mark> &gt; <mark class="blue">Process</mark> &gt; <mark class="blue">Composite</mark>)</p>
+<blockquote>
+<p>Remember to order the bands correctly to preserve their natural order.</p>
+</blockquote>
+</li>
+<li>
+<p>Rename the composite to <code>Composite_date1</code></p>
+</li>
+<li>
+<p>Adjust the symbology to create a <strong>True Color</strong> composite</p>
+<blockquote>
+<p>Red: Band 3; Green: Band 2; Blue: Band 1</p>
+</blockquote>
+</li>
+<li>
+<p>Add to the map the <em>Scene Classification Layer (SCL)</em> available in: <code>IMG_DATA/R20m/T29TPE_20260627T112111_SCL_20m.jp2</code></p>
+<details class="info">
+<summary>About SCL</summary>
+<p>The Scene Classification Layer (SCL) is a 20-meter resolution classification raster included in Sentinel-2 Level-2A products that automatically categorizes every pixel into 12 surface and atmospheric classes—such as clouds, cloud shadows, vegetation, bare soil, water, and snow—primarily for cloud masking and quality filtering.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab2/scl.png" data-title="SCL" data-desc-position="bottom"><img alt="SCL" src="../assets/lab2/scl.png"></a></p>
+</details>
+</li>
+<li>
+<p>Add the limits of our study area to ArcGIS (<code>study_area.kml</code>)</p>
+</li>
+<li>
+<p>Clip the composite to the study area</p>
+<ul>
+<li>Search for the <mark class="blue">Clip Raster</mark> tool in <mark class="blue">Analysis</mark> &gt; <mark class="blue">Tools</mark></li>
+<li>In the <em>Input Raster</em> field, select <code>Composite_date1</code></li>
+<li>In the <em>Output Extent</em> field, select the <code>study_area</code></li>
+<li>In the <em>Output Raster Dataset</em> field, name the output <code>Composite_date1_Clip</code></li>
+</ul>
+</li>
+<li>
+<p>Clip the SCL to the study area</p>
+<ul>
+<li>Search for the <mark class="blue">Clip Raster</mark> tool in <mark class="blue">Analysis</mark> &gt; <mark class="blue">Tools</mark></li>
+<li>In the <em>Input Raster</em> field, select the <code>T29TPE_20260627T112111_SCL_20m</code> layer</li>
+<li>In the <em>Output Extent</em> field, select the <code>study_area</code></li>
+<li>In the <em>Output Raster Dataset</em> field, name the output <code>SCL_date1_Clip</code></li>
+</ul>
+</li>
+<li>
+<p>Create a cloud and cloud shadow mask using the SCL layer</p>
+<ul>
+<li>Search for the <mark class="blue">Raster Calculator</mark> in <mark class="blue">Analysis</mark> &gt; <mark class="blue">Tools</mark></li>
+<li>Use the following expression to create a binary mask (a raster with zeros and ones) masks (set the pixel value to zero) the invalid pixels (e.g. clouds, shadows, saturated/defective pixels)
+    <div class="highlight"><pre><span></span><code>(( "SCL_date1_Clip"&gt;3)&amp;( "SCL_date1_Clip" &lt;=7))|( "SCL_date1_Clip"==11)
+</code></pre></div></li>
+<li>Name the <em>Output raster</em> as <code>mask_date1_temp</code></li>
+</ul>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab2/mask_date1_temp.png" data-title="Binary Mask (red=1, grey=0) computed based on SCL." data-desc-position="bottom"><img alt="Binary Mask (red=1, grey=0) computed based on SCL." src="../assets/lab2/mask_date1_temp.png"></a></p>
+<figcaption>
+<p>Binary Mask (red=1, grey=0) computed based on SCL. </p>
+</figcaption>
+</figure>
+</li>
+<li>
+<p>Set the zeros to NoData in the resulting binary mask raster</p>
+<ul>
+<li>Search for the <mark class="blue">Raster Calculator</mark> in <mark class="blue">Analysis</mark> &gt; <mark class="blue">Tools</mark></li>
+<li>Use the <code>SetNull</code> operator as shown:
+    <div class="highlight"><pre><span></span><code>SetNull("mask_date1_temp"==0, 1)
+</code></pre></div></li>
+<li>Name the <em>Output raster</em> as <code>mask_date1_temp2</code></li>
+</ul>
+<details class="info">
+<summary>(Optional) Fuse steps 9 and 10 into a single operation</summary>
+<p>Steps 9 and 10 could be merged into a single operation in the raster calculator, as in:</p>
+<div class="highlight"><pre><span></span><code>SetNull( (( "SCL_date1_Clip"&gt;3)&amp;( "SCL_date1_Clip" &lt;=7))|( "SCL_date1_Clip"==11)==0,1)
+</code></pre></div>
+</details>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab2/mask_date1_temp2.png" data-title="Binary Mask (grey=1, empty=NoData) computed based on SCL." data-desc-position="bottom"><img alt="Binary Mask (grey=1, empty=NoData) computed based on SCL." src="../assets/lab2/mask_date1_temp2.png"></a></p>
+<figcaption>
+<p>Binary Mask (grey=1, empty=NoData).</p>
+</figcaption>
+</figure>
+</li>
+<li>
+<p>Resample the mask from 20 m to 10 m</p>
+<ul>
+<li>Search for the <mark class="blue">Resample</mark> tool in <mark class="blue">Analysis</mark> &gt; <mark class="blue">Tools</mark></li>
+<li>Select  <code>mask_date1_temp2</code> as the <em>Input Raster</em></li>
+<li>Name the <em>Output Raster Dataset</em> as <code>mask_date1_final</code></li>
+<li>Change the spatial resolution, defining <em>X</em> and <em>Y</em> as <code>10</code></li>
+<li>Leave the <em>Resampling Techinique</em> as <code>Nearest Neighbors</code></li>
+</ul>
+</li>
+<li>
+<p>Mask the composite with the final cloud mask</p>
+<ul>
+<li>Search for the <mark class="blue">Extract by Mask</mark> tool in <mark class="blue">Analysis</mark> &gt; <mark class="blue">Tools</mark></li>
+<li>In the <em>Input raster</em> field, select the <code>Composite_date1_Clip</code></li>
+<li>In the <em>Input raster or feature mask data</em>, select <code>mask_date1_final</code></li>
+<li>Name the <em>Output raster</em> as <code>Composite_date1_masked</code></li>
+<li>For <em>Extraction Area</em>, select <code>Inside</code></li>
+</ul>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab2/composite_masked.png" data-title="Masked Composite" data-desc-position="bottom"><img alt="Masked Composite" src="../assets/lab2/composite_masked.png"></a></p>
+<figcaption>
+<p>Masked Composite (True Color composition).</p>
+</figcaption>
+</figure>
+</li>
+</ol>
+<details class="note">
+<summary>About NoData and missing values</summary>
+<p><code>NoData</code> is a special raster value representing the absence of a valid measurement, ensuring that pixels removed during cloud masking are ignored in subsequent statistical calculations and compositing rather than treated as zeros. Visually, GIS software typically renders <code>NoData</code> pixels as transparent.</p>
+</details>
+<h3 id="fill-gaps">Fill Gaps</h3>
+<p>Masking the pixels related to clouds and cloud shadows leaves empty spaces in the composite. We are going to use the image from the second date (29/06/2026) to fill those missing values.</p>
+<ol>
+<li>Load the Bands B2, B3, B4 and B8 (10m) from the second date (29/06/2026) in ArcGIS</li>
+<li>Create a composite (<em>remember to use bands in the correct order</em>)</li>
+<li>Rename the composite to <code>Composite_date2</code></li>
+<li>Clip the composite to the study area, naming the output as <code>Composite_date2_Clip</code></li>
+<li>Create a Mosaic<ul>
+<li>In <mark class="blue">Imagery</mark> tab, select <mark class="blue">Raster Functions</mark></li>
+<li>Search for the <mark class="blue">Mosaic Rasters</mark> tool</li>
+<li>Select the <code>Composite_date1_masked</code> and <code>Composite_date2_Clip</code></li>
+<li>
+<p>In the <em>Operation</em> field, choose <code>Mean</code></p>
+<blockquote>
+<p>By choosing <code>Mean</code>, pixel values in the mosaic will be the average of pixels in the input composites.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab2/composite_gapfilled.png" data-title="Gap-Filled Composite" data-desc-position="bottom"><img alt="Gap-Filled Composite" src="../assets/lab2/composite_gapfilled.png"></a></p>
+<figcaption>
+<p>Composite after gap filling.</p>
+</figcaption>
+</figure>
+<h2 id="part-3-feature-engineering">Part 3 - Feature Engineering</h2>
+<p>The goal of this section is to generate the composites that will serve as inputs for the the next Lab (Lab 3: Pixel-Level Land Cover Classification).</p>
+<p>Two composites must be exported as GeoTiffs:</p>
+<ul>
+<li>A Baseline composite (RGB + NIR)</li>
+<li>An NDVI composite (RGB + NIR + NDVI)</li>
+</ul>
+<h3 id="baseline-composite">Baseline Composite</h3>
+<p>For the Baseline composite, simply export the Mosaic created in the previous section:</p>
+<ul>
+<li><mark class="blue">Right click</mark> &gt; <mark class="blue">Data</mark> &gt; <mark class="blue">Export Raster</mark></li>
+<li>Name it <code>Composite_Baseline.tif</code></li>
+<li>Leave the other fields as default</li>
+</ul>
+<h3 id="ndvi">NDVI</h3>
+<p>Compute the NDVI and add it to the Baseline Composite.</p>
+<ol>
+<li>
+<p>Compute NDVI</p>
+<ul>
+<li>Select the Baseline Composite in the Contents pane</li>
+<li><mark class="blue">Imagery</mark> &gt; <mark class="blue">Indices</mark> &gt; <mark class="blue">NDVI</mark></li>
+<li>For <em>Near Infrared Band Index</em>, select <code>4 - Band 4</code></li>
+<li>For <em>Red Band Index</em>, select <code>3 - Band 3</code></li>
+</ul>
+</li>
+<li>
+<p>The resulting NDVI layer is in the [-1, 1] scale. In order to match the Baseline Composite scale, it needs to be multiplied by <code>10,000</code></p>
+<blockquote>
+<p>Tip: Use the <strong>Band Arithmetic</strong> tool</p>
+</blockquote>
+</li>
+<li>
+<p>Create the NDVI composite (Bands: Blue, Green, Red, NIR, NDVI)</p>
+<ul>
+<li>Select the scaled NDVI and the Baseline Composite layers in the Contents pane. To ensure the correct band order in the target composite, place the Baseline Composite on top</li>
+</ul>
+</li>
+<li>
+<p>Export the NDVI composite as a GeoTiff file. Name it <code>Composite_NDVI.tif</code></p>
+<ul>
+<li>Set the <em>Pixel Type</em> to <code>16 Bit Signed</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="exercise">Exercise</h2>
+<p>Download a cloud-free image from the winter (e.g. <code>22/02/2026</code>) and create a temporal composite by stacking it to the Baseline Composite.</p>
+<p>The temporal composite should have the following bands:</p>
+<ul>
+<li>Band 1: Blue (Baseline Composite)</li>
+<li>Band 2: Green (Baseline Composite)</li>
+<li>Band 3: Red (Baseline Composite)</li>
+<li>Band 4: NIR (Baseline Composite)</li>
+<li>Band 5: Blue (Winter image)</li>
+<li>Band 6: Green (Winter image)</li>
+<li>Band 7: Red (Winter image)</li>
+<li>Band 8: NIR (Winter image)</li>
+</ul>
+<p>Export the composite as <code>Composite_temporal.tif</code>.</p>
+<p><br><br></p>
+<p><img alt="🏆" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f3c6.svg" title=":trophy:"> <mark class="green">Congratulations, you reached the end of Lab 2.</mark></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "content.code.copy", "toc.follow", "navigation.top", "content.code.copy", "content.tabs.link", "navigation.path"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

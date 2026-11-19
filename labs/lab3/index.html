@@ -1,0 +1,1487 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/labs/lab3/">
+      
+      
+        <link rel="prev" href="../lab2/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Lab 3 - Remote Sensing Lab</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab-3-class-6" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Remote Sensing Lab" class="md-header__button md-logo" aria-label="Remote Sensing Lab" data-md-component="logo">
+      
+  <img src="../../assets/icon_rs.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Remote Sensing Lab
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab 3
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="light-green" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="light-green" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden="">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Remote Sensing Lab" class="md-nav__button md-logo" aria-label="Remote Sensing Lab" data-md-component="logo">
+      
+  <img src="../../assets/icon_rs.png" alt="logo">
+
+    </a>
+    Remote Sensing Lab
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix="">
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Software
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Software
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/arcgispro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install ArcGIS Pro
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/qgis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install QGIS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Data
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/CDSE_account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDSE: Create account
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../data/CDSE_browser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDSE: Download images
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked="">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Exercises
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Exercises
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix="">
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lab-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-arcgis-pro-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create ArcGIS Pro Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-sampling-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basics of Sampling Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random Forest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-manual-collection-of-training-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Optional) Manual Collection of Training Samples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-data-for-land-cover-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Data for Land Cover Classification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-splitting-traintest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Splitting (Train/Test)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Splitting (Train/Test)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random Sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stratified-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stratified Sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#express-classification-and-accuracy-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Express Classification and Accuracy Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-to-end-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-end Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+      
+        <li class="md-nav__item">
+  <a href="#lab-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lab Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-arcgis-pro-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create ArcGIS Pro Project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-materials" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Download Materials
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics-of-sampling-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basics of Sampling Design
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#random-forest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random Forest
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#optional-manual-collection-of-training-samples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        (Optional) Manual Collection of Training Samples
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference-data-for-land-cover-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reference Data for Land Cover Classification
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-splitting-traintest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Splitting (Train/Test)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Splitting (Train/Test)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random Sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stratified-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stratified Sampling
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#express-classification-and-accuracy-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Express Classification and Accuracy Assessment
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#end-to-end-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        End-to-end Workflow
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercise
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Navigation">
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Home
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../lab1/" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Exercises
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="lab-3-class-6">Lab 3 (Class 6)</h1>
+<h2 id="lab-overview">Lab Overview</h2>
+<p>In this Lab, you will learn the basics of sample collection and how to perform land cover classification using the Random Forest algorithm.</p>
+<hr>
+<h2 id="create-arcgis-pro-project">Create ArcGIS Pro Project</h2>
+<p>Using the folder structure set up in Lab 1, create a <em>New Project</em> named <code>Lab_3</code> inside the <code>RemoteSensing</code> folder.</p>
+<h2 id="download-materials">Download Materials</h2>
+<ul>
+<li>Download the <a href="https://liveeduisegiunl-my.sharepoint.com/:f:/g/personal/dmoraes_novaims_unl_pt/IgCaz0X2yFqUTIL6vtNmgCXiAb9G83qO1AHv_MGw38BlrBU?e=eMeVN7">Lab_3 materials</a></li>
+<li>Copy the materials to the <code>Lab_3</code> folder</li>
+</ul>
+<hr>
+<h2 id="basics-of-sampling-design">Basics of Sampling Design</h2>
+<p>In supervised machine learning, algorithms learn from a set of labelled examples. In the context of remote sensing, sampling refers to selecting the locaions (e.g. pixels, areas) where the true class is known. These reference samples can be used for training the algorithm and assessing the accuracy of the resulting map.</p>
+<p>Sampling design determines how locations are selected and has the following components:</p>
+<ul>
+<li>
+<p><strong>Collection method</strong>: manual collection (e.g. field surveys, visual interpretation of imagery), automatic collection (e.g. using existing maps)</p>
+</li>
+<li>
+<p><strong>Sampling method</strong>: Simple Random, Stratified, Systematic</p>
+</li>
+<li>
+<p><strong>Sample size</strong>: the sample needs to be large enough to capture the spectral variability of each class</p>
+</li>
+<li>
+<p><strong>Class balance</strong>: classes should have a similar sample size, otherwise the algorithm tend to favor the over-represented classes</p>
+</li>
+<li>
+<p><strong>Spatial autocorrelation</strong>: neighboring pixels tend do be relatively similar. If training and validation/test samples are acquired from the same polygon or adjacent locations, they are not truly independent and as a result the accuracy will be inflated. It is good practice to split the reference data by polygon or by cells in a spatial grid to prevent spatial autocorrelation.</p>
+</li>
+</ul>
+<h2 id="random-forest">Random Forest</h2>
+<p>A random forest is an ensemble algorithm that combines many <strong>decision trees</strong>. Each tree is trained on a random sample of the training data, and at each split it can only choose from a random subset of the features. This randomness introduces diversity among the trees, so that their individual errors are largely uncorrelated. For classification, every tree votes for a class and the majority class wins, which gives more accurate and stable results than a single decision tree.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab3/decision_tree.svg" data-title="Decision Tree" data-desc-position="bottom"><img alt="Decision Tree" src="../assets/lab3/decision_tree.svg"></a></p>
+<p>Random Forest is robust to noise in the training data, less prone to overfitting and has a strong performance on tabular data. Random forests are highly parallelizable, since each tree is trained and makes its prediction independently of the others, allowing the trees to be built and run at the same time on separate processors.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab3/random_forest.svg" data-title="Random Forest" data-desc-position="bottom"><img alt="Random Forest" src="../assets/lab3/random_forest.svg"></a></p>
+<h2 id="optional-manual-collection-of-training-samples">(Optional) Manual Collection of Training Samples</h2>
+<p>Training samples can be collected manually either by drawing points or polygons on a GIS software based on visual interpretation of remote sensing imagery.</p>
+<p>ArcGIS Pro offers a convenient tool that allows training sample collection in a user friendly way.</p>
+<p>Follow the steps below to create a training sample:</p>
+<ol>
+<li>
+<p>Add the <code>Composite_Baseline.tif</code> to ArcGIS and select it in the <em>Contents</em> pane</p>
+</li>
+<li>
+<p>In the <mark class="blue">Imagery</mark> tab, click on <mark class="blue">Classification Tools</mark> and select <mark class="blue">Training Samples Manager</mark></p>
+</li>
+<li>
+<p>You can use the default class schema (NLCD2011) and add/remove classes to fit your classification legend. Alternatively, create a new class scheme from scratch</p>
+</li>
+<li>
+<p>To add a training sample, just choose a class (i) and a selection method (ii), such as point, rectangle, freehand <em>etc</em>. Next, select your point or draw the polygon on the map that captures samples of your class of interest (iii)</p>
+</li>
+<li>
+<p>Add multiple training samples for every class in your class scheme</p>
+</li>
+<li>
+<p>After completion, save the training samples as a feature class or shapefile</p>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">In this Lab we are going to use a pre-existing training sample.</p>
+</div>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab3/sample_collection_arcgis.png" data-title="Sample Collection on ArcGIS" data-desc-position="bottom"><img alt="Sample Collection on ArcGIS" src="../assets/lab3/sample_collection_arcgis.png"></a></p>
+<figcaption>
+<p>Training sample collection on ArcGIS. </p>
+</figcaption>
+</figure>
+<h2 id="reference-data-for-land-cover-classification">Reference Data for Land Cover Classification</h2>
+<p>This Lab utilizes a previously collected reference dataset. The class schema, also known as class nomenclature or map legend, comprises 6 classes as seen in the table below.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Built-up</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Crops and Pastures</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Deciduous Trees</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Evergreen Trees</td>
+<td>4</td>
+</tr>
+<tr>
+<td>Shrubs</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Water</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>We are going to use the <code>reference_sample.shp</code> that contains manually annotated polygons to extract our training features from the satellite imagery, as illustrated in the figure below.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab3/polygon_raster_sampling.svg" data-title="Sampling with polygons" data-desc-position="bottom"><img alt="Sampling with polygons" class="invert-dark" src="../assets/lab3/polygon_raster_sampling.svg"></a></p>
+<h2 id="data-splitting-traintest">Data Splitting (Train/Test)</h2>
+<p>In this first phase, the dataset is partitioned into training and test subsets.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab3/data_split.svg" data-title="Train and Test Splitting" data-desc-position="bottom"><img alt="Train and Test Splitting" class="invert-dark" src="../assets/lab3/data_split.svg"></a></p>
+<h3 id="random-sampling">Random Sampling</h3>
+<p>Random sampling selects members of a population with equal probability, independently of any grouping or characteristic. Consequently, subgroup representation in the sample is determined by chance, and small subgroups may be under-represented or omitted.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab3/random_sampling.svg" data-title="Random Sampling" data-desc-position="bottom"><img alt="Random Sampling" class="invert-dark" src="../assets/lab3/random_sampling.svg"></a></p>
+<p>ArcGIS offers an out-of-the-box tool that allows to split a feature dataset into training and test sets.</p>
+<ol>
+<li>
+<p>Load the <code>reference_sample.shp</code> into ArcGIS</p>
+</li>
+<li>
+<p>Search for the <mark class="blue">Subset Features</mark> tool in the <mark class="blue">Geoprocessing</mark> toolbox</p>
+</li>
+<li>
+<p>Select the <code>reference_sample</code> as the <em>Input Features</em></p>
+</li>
+<li>
+<p>Name the <em>Output Training Feature Class</em> as <code>train_set</code> and <em>Output Test Feature Class</em> as <code>test_set</code></p>
+</li>
+<li>
+<p>Define the <em>Size of Training Feture Subset</em> as 80 and in the <em>Subset Size Units</em> select <code>PERCENTAGE_OF_INPUT</code></p>
+<blockquote>
+<p>The data will be split into 80% for training and 20% for test.</p>
+</blockquote>
+</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Analyze the resulting train and test samples. Are they a good representation of the population?</p>
+</div>
+<h3 id="stratified-sampling">Stratified Sampling</h3>
+<p>Stratified sampling divides a population into distinct subgroups, or strata, and selects members independently within each stratum, typically in proportion to its size. Consequently, every subgroup is guaranteed representation, and the sample reflects the composition of the population.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../assets/lab3/stratified_sampling.svg" data-title="Stratified Sampling" data-desc-position="bottom"><img alt="Stratified Sampling" class="invert-dark" src="../assets/lab3/stratified_sampling.svg"></a></p>
+<p>Unfortunately, ArcGIS does not offer a straightforward tool to perform stratified sampling. A possible workaround is presented in the steps below:</p>
+<ol>
+<li>
+<p>Split the reference sample by class</p>
+<ul>
+<li>Search for the <mark class="blue">Split by Attributes</mark> tool in the <mark class="blue">Geoprocessing</mark> toolbox</li>
+<li>Set the <em>Input Table or Features</em> to the <code>reference_sample</code></li>
+<li>In the <em>Target Workspace</em> create a folder called <code>split_class</code> in the <code>Lab_3</code> folder. Select the <code>split_class</code> folder</li>
+<li>For <em>Split Fields</em> select <code>classname</code></li>
+<li>This will create 6 feature classes, one for each class in the reference sample, in the <code>split_class</code> folder</li>
+</ul>
+</li>
+<li>
+<p>Subset each class into train and test sets</p>
+<ul>
+<li>Search for the <mark class="blue">Subset Features</mark> tool in the <mark class="blue">Geoprocessing</mark> toolbox. Right-click on it and select <em>Batch</em>. Accept the default parameters and click <em>Next</em></li>
+<li>Add all the individual class shapefiles as inputs</li>
+<li>Set the <em>Size of Training Feture Subset</em> to 80 and in the <em>Subset Size Units</em> select <code>PERCENTAGE_OF_INPUT</code></li>
+<li>Run the tool</li>
+</ul>
+</li>
+<li>
+<p>Merge training subsets</p>
+<ul>
+<li>Search for the <mark class="blue">Merge</mark> tool in the <mark class="blue">Geoprocessing</mark> toolbox</li>
+<li>Add the training subsets of each class as the <em>Input Datasets</em></li>
+<li>Name the <em>Output Dataset</em> as <code>train_set_stratified</code></li>
+</ul>
+</li>
+<li>
+<p>Merge test subsets</p>
+<ul>
+<li>Search for the <mark class="blue">Merge</mark> tool in the <mark class="blue">Geoprocessing</mark> toolbox</li>
+<li>Add the test subsets of each class as the <em>Input Datasets</em></li>
+<li>Name the <em>Output Dataset</em> as <code>test_set_stratified</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="classification">Classification</h2>
+<p>This section is dedicated to performing a land cover classification based on the Random Forest classifier (referred to as <em>Random Trees</em> in ArcGIS).</p>
+<p>Two main approaches are described in this section:</p>
+<ul>
+<li><strong>Express Classification</strong>: A fast and straightforward method for generating a preliminary land-cover map quickly without the extra steps of model tuning or statistical validation</li>
+<li><strong>End-to-end Workflow</strong>: A comprehensive pipeline that trains the Random Forest classifier and validates the final map using the test dataset and a confusion matrix.</li>
+</ul>
+<h3 id="express-classification-and-accuracy-assessment">Express Classification and Accuracy Assessment</h3>
+<p>Follow the steps below to conduct an express classification on ArcGIS:</p>
+<ol>
+<li>
+<p>In the <em>Contents</em> pane, select the input image (e.g. <code>Composite_Baseline</code>)</p>
+</li>
+<li>
+<p>Go to <mark class="blue">Imagery</mark> &gt; <mark class="blue">Classification Tools</mark> &gt; <mark class="blue">Classify</mark></p>
+</li>
+<li>
+<p>Configure the classification parameters:</p>
+<ul>
+<li><em>Classifier</em>: <code>Random Trees</code> (ArcGIS version of Random Forest)</li>
+<li><em>Training Samples</em>: <code>train_set_stratified</code></li>
+<li><em>Maximum Number of Samples per Class</em>: <code>0</code> (set to zero to use all available samples)</li>
+<li><em>Output Classified Dataset</em>: name the output as <code>clf_base_express</code></li>
+</ul>
+</li>
+<li>
+<p>Run the image classification. The classification map will be displayed when the classification is completed</p>
+</li>
+<li>
+<p>For the accuracy assessment, search for the <mark class="blue">Compute Accuracy For Pixel Classification</mark> tool</p>
+<ul>
+<li><em>Input Raster</em>: <code>clf_base_express</code></li>
+<li><em>Ground Truth Data</em>: <code>test_set_stratified</code></li>
+<li><em>Number of Random Points</em>: <code>1,000</code></li>
+<li>Run the tool</li>
+</ul>
+</li>
+<li>
+<p>Inspect the confusion matrix under <em>Standalone Tables</em></p>
+</li>
+</ol>
+<h3 id="end-to-end-workflow">End-to-end Workflow</h3>
+<p>The end-to-end workflow is a comprehensive approach that allows training the model, conducting the accuracy assessment on the test set and then using the trained model to create the classification map.</p>
+<p>This is the recommended approach in real-world applications, since it allows evaluating the accuracy of their trained model before creating the map, which is an expensive operation from a computational standpoint.</p>
+<p><strong>Preparing the training and test data</strong></p>
+<ol>
+<li>
+<p>Open <code>Lab_3_Toolbox</code></p>
+</li>
+<li>
+<p>Run the <mark class="blue">Extract_Points_Lab3</mark> tool</p>
+<ul>
+<li>Select the <code>Composite_Baseline.tif</code> as the <em>Input raster</em></li>
+<li>Select the <code>train_set_stratified</code> as the <em>Polygon Layer</em></li>
+<li>Name the <em>Output point features</em> as <code>train_set_points</code></li>
+</ul>
+</li>
+<li>
+<p>Repeat the same process, but this time for the test set</p>
+</li>
+<li>Select the <code>Composite_Baseline.tif</code> as the <em>Input raster</em><ul>
+<li>Select the <code>test_set_stratified</code> as the <em>Polygon Layer</em></li>
+<li>Name the <em>Output point features</em> as <code>test_set_points</code></li>
+</ul>
+</li>
+</ol>
+<p><strong>Train Random Forest Model</strong></p>
+<ol>
+<li>
+<p>Open the <mark class="blue">Forest-based and Boosted Classification and Regression</mark> tool</p>
+</li>
+<li>
+<p>Configure the tool as follows:</p>
+<ul>
+<li><em>Prediction Type</em>: <code>Predict to features</code></li>
+<li><em>Model Type</em>: <code>Forest-based</code></li>
+<li><em>Input Training Features</em>: <code>train_set_points</code></li>
+<li><em>Variable to Predict</em>: <code>classvalue</code> (check the <em>Treat Variable as Categorical</em> box)</li>
+<li><em>Explanatory Training Rasters</em>: Click on the folder icon and navigate to the <code>Composite_Baseline.tif</code>. Double click on the tif file to see the 4 bands. Select all bands and press <em>OK</em></li>
+<li><em>Input Prediction Features</em>: <code>test_set_points</code></li>
+<li><em>Output Predicted Features</em>: <code>out_test</code></li>
+<li><em>Output Trained Model File</em>: <code>model_rf_baseline</code></li>
+<li><em>Output Trained Features</em>: <code>out_train</code></li>
+<li>Run the tool to start model training</li>
+</ul>
+</li>
+<li>
+<p>Inspect the <code>out_train</code> and <code>out_test</code> datasets on the map</p>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">You can change some hyperparameters (e.g. Number of Trees) to try to improve the model's performance</p>
+</div>
+<p><strong>Evaluate Model Accuracy</strong></p>
+<ol>
+<li>
+<p>Open the <code>Prepare_Predicted_Points_Lab3</code> tool in the <code>Lab_3_Toolbox</code></p>
+<ul>
+<li>In <em>Test Polygons</em>, select <code>test_set_stratified</code></li>
+<li>In <em>Predictions (Points)</em>, select <code>out_test</code></li>
+</ul>
+</li>
+<li>
+<p>Now the <code>out_test</code> points have two columns that allow ArcGIS to compute a confusion matrix (<em>Classified</em> and <em>GrndTruth</em>)</p>
+</li>
+<li>
+<p>Open the <mark class="blue">Compute Confusion Matrix</mark> tool</p>
+<ul>
+<li><em>Input Accuracy Assessment Points</em>: <code>out_test</code></li>
+<li><em>Output Confusion Matrix</em>: <code>CM_Baseline</code></li>
+<li>Run the tool to compute the confusion matrix</li>
+</ul>
+</li>
+<li>
+<p>The confusion matrix will be added to the contents pane (under <em>Standalone Tables</em> at the bottom). Inspect the confusion matrix (open attribute table)</p>
+</li>
+</ol>
+<p><strong>Create Classification Map</strong></p>
+<p>If the model accuracy evaluated on the test set is satisfactory, we can proceed to using the model to create a classification map for our whole study area.</p>
+<ol>
+<li>
+<p>Open the <mark class="blue">Predict Using Spatial Statistic Model file</mark> tool</p>
+</li>
+<li>
+<p>Use the settings below:</p>
+<ul>
+<li><em>Input Model File</em>: <code>model_rf_baseline.ssm</code></li>
+<li><em>Prediction Type</em>: <code>Predict to raster</code></li>
+<li><em>Output Predicted Raster</em>: <code>map_clf_baseline</code></li>
+<li>Click on the folder icon and navigate to the <code>Composite_Baseline.tif</code>. Double click on the tif file to see the 4 bands. Select all bands and press <em>OK</em>. Make sure the <em>Prediction</em> bands match the <em>Training</em> bands</li>
+<li>Run the prediction to create the map</li>
+</ul>
+</li>
+<li>
+<p>Inspect the classification map</p>
+</li>
+</ol>
+<h2 id="exercise">Exercise</h2>
+<p>Load the <code>Composite_NDVI</code> created during the last Lab. In addition to the 4 bands of the baseline composite, it has the NDVI as the fifth band.</p>
+<p>Train a Random Trees model using the <code>Composite_NDVI</code> as the input. Evaluate the accuracy on the test set. Compare the accuracy of this model to the baseline model to assess if including the NDVI improved the predictive capabilities of the model.</p>
+<p>Similarly, repeat the process using the bi-temporal composite created in the last Lab.</p>
+<p><br><br></p>
+<p><img alt="🎖" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f396.svg" title=":military_medal:"> <mark class="green">Congratulations, you reached the end of Lab 3.</mark></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden="">
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.instant", "content.code.copy", "toc.follow", "navigation.top", "content.code.copy", "content.tabs.link", "navigation.path"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="760" viewBox="0 0 980 760" font-family="Helvetica, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M1 1L9 5L1 9z" fill="#777"/></marker></defs>
+<rect width="980" height="760" fill="#FFFFFF"/>
+<text x="490.0" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#222">Random forest: many decision trees vote on each pixel</text>
+<text x="490.0" y="56" text-anchor="middle" font-size="13" fill="#666">Each tree is trained on a random sample of training pixels and considers a random subset of bands at each split.</text>
+<rect x="380" y="78" width="220" height="54" rx="8" fill="#F6F6F4" stroke="#999"/>
+<rect x="396" y="96" width="16" height="16" rx="2" fill="#C0392B"/>
+<rect x="416" y="96" width="16" height="16" rx="2" fill="#2E8B3E"/>
+<rect x="436" y="96" width="16" height="16" rx="2" fill="#2465A8"/>
+<text x="462" y="102" font-size="15" font-weight="bold" fill="#222">Input pixel</text>
+<text x="462" y="120" font-size="12" fill="#666">R, G, B values</text>
+<line x1="490" y1="132" x2="130" y2="166" stroke="#777" stroke-width="1.3" marker-end="url(#a)"/>
+<text x="130" y="186" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Tree 1</text>
+<text x="130" y="204" text-anchor="middle" font-size="12" fill="#666">random pixels + bands</text>
+<line x1="70.5" y1="282" x2="45.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="96.0" y1="332" x2="79.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="96.0" y1="332" x2="113.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="70.5" y1="282" x2="96.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="130.0" y1="232" x2="70.5" y2="282" stroke="#AAA" stroke-width="1.3"/>
+<line x1="164.0" y1="332" x2="147.0" y2="382" stroke="#E08A1E" stroke-width="3"/>
+<line x1="164.0" y1="332" x2="181.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="189.5" y1="282" x2="164.0" y2="332" stroke="#E08A1E" stroke-width="3"/>
+<line x1="189.5" y1="282" x2="215.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="130.0" y1="232" x2="189.5" y2="282" stroke="#E08A1E" stroke-width="3"/>
+<circle cx="45.0" cy="332" r="10" fill="#2F5A2E" stroke="#555" stroke-width="0.8"/>
+<circle cx="79.0" cy="382" r="10" fill="#2C5F8A" stroke="#555" stroke-width="0.8"/>
+<circle cx="113.0" cy="382" r="10" fill="#9A7650" stroke="#555" stroke-width="0.8"/>
+<circle cx="96.0" cy="332" r="11" fill="#FFFFFF" stroke="#666" stroke-width="1.5"/>
+<circle cx="70.5" cy="282" r="11" fill="#FFFFFF" stroke="#666" stroke-width="1.5"/>
+<circle cx="147.0" cy="382" r="10" fill="#8DB255" stroke="#E08A1E" stroke-width="3"/>
+<circle cx="181.0" cy="382" r="10" fill="#8C8C88" stroke="#555" stroke-width="0.8"/>
+<circle cx="164.0" cy="332" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="215.0" cy="332" r="10" fill="#EEF1F4" stroke="#555" stroke-width="0.8"/>
+<circle cx="189.5" cy="282" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="130.0" cy="232" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<text x="130" y="484" text-anchor="middle" font-size="12" fill="#666">vote</text>
+<rect x="78" y="492" width="104" height="28" rx="14" fill="#FFFFFF" stroke="#E08A1E" stroke-width="1.5"/>
+<circle cx="94" cy="506" r="6" fill="#8DB255" stroke="#555" stroke-width="0.6"/>
+<text x="136" y="511" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Cropland</text>
+<line x1="130" y1="520" x2="400.0" y2="574" stroke="#777" stroke-width="1.3" marker-end="url(#a)"/>
+<line x1="490" y1="132" x2="350" y2="166" stroke="#777" stroke-width="1.3" marker-end="url(#a)"/>
+<text x="350" y="186" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Tree 2</text>
+<text x="350" y="204" text-anchor="middle" font-size="12" fill="#666">random pixels + bands</text>
+<line x1="294.75" y1="282" x2="265.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="324.5" y1="332" x2="299.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="350.0" y1="382" x2="333.0" y2="432" stroke="#AAA" stroke-width="1.3"/>
+<line x1="350.0" y1="382" x2="367.0" y2="432" stroke="#E08A1E" stroke-width="3"/>
+<line x1="324.5" y1="332" x2="350.0" y2="382" stroke="#E08A1E" stroke-width="3"/>
+<line x1="294.75" y1="282" x2="324.5" y2="332" stroke="#E08A1E" stroke-width="3"/>
+<line x1="356.375" y1="232" x2="294.75" y2="282" stroke="#E08A1E" stroke-width="3"/>
+<line x1="418.0" y1="282" x2="401.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="418.0" y1="282" x2="435.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="356.375" y1="232" x2="418.0" y2="282" stroke="#AAA" stroke-width="1.3"/>
+<circle cx="265.0" cy="332" r="10" fill="#2C5F8A" stroke="#555" stroke-width="0.8"/>
+<circle cx="299.0" cy="382" r="10" fill="#2F5A2E" stroke="#555" stroke-width="0.8"/>
+<circle cx="333.0" cy="432" r="10" fill="#9A7650" stroke="#555" stroke-width="0.8"/>
+<circle cx="367.0" cy="432" r="10" fill="#8DB255" stroke="#E08A1E" stroke-width="3"/>
+<circle cx="350.0" cy="382" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="324.5" cy="332" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="294.75" cy="282" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="401.0" cy="332" r="10" fill="#8C8C88" stroke="#555" stroke-width="0.8"/>
+<circle cx="435.0" cy="332" r="10" fill="#EEF1F4" stroke="#555" stroke-width="0.8"/>
+<circle cx="418.0" cy="282" r="11" fill="#FFFFFF" stroke="#666" stroke-width="1.5"/>
+<circle cx="356.375" cy="232" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<text x="350" y="484" text-anchor="middle" font-size="12" fill="#666">vote</text>
+<rect x="298" y="492" width="104" height="28" rx="14" fill="#FFFFFF" stroke="#E08A1E" stroke-width="1.5"/>
+<circle cx="314" cy="506" r="6" fill="#8DB255" stroke="#555" stroke-width="0.6"/>
+<text x="356" y="511" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Cropland</text>
+<line x1="350" y1="520" x2="455.0" y2="574" stroke="#777" stroke-width="1.3" marker-end="url(#a)"/>
+<line x1="490" y1="132" x2="570" y2="166" stroke="#777" stroke-width="1.3" marker-end="url(#a)"/>
+<text x="570" y="186" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Tree 3</text>
+<text x="570" y="204" text-anchor="middle" font-size="12" fill="#666">random pixels + bands</text>
+<line x1="485.0" y1="332" x2="468.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="485.0" y1="332" x2="502.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="510.5" y1="282" x2="485.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="510.5" y1="282" x2="536.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="565.75" y1="232" x2="510.5" y2="282" stroke="#AAA" stroke-width="1.3"/>
+<line x1="587.0" y1="332" x2="570.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="587.0" y1="332" x2="604.0" y2="382" stroke="#E08A1E" stroke-width="3"/>
+<line x1="621.0" y1="282" x2="587.0" y2="332" stroke="#E08A1E" stroke-width="3"/>
+<line x1="655.0" y1="332" x2="638.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="655.0" y1="332" x2="672.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="621.0" y1="282" x2="655.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="565.75" y1="232" x2="621.0" y2="282" stroke="#E08A1E" stroke-width="3"/>
+<circle cx="468.0" cy="382" r="10" fill="#2C5F8A" stroke="#555" stroke-width="0.8"/>
+<circle cx="502.0" cy="382" r="10" fill="#2F5A2E" stroke="#555" stroke-width="0.8"/>
+<circle cx="485.0" cy="332" r="11" fill="#FFFFFF" stroke="#666" stroke-width="1.5"/>
+<circle cx="536.0" cy="332" r="10" fill="#9A7650" stroke="#555" stroke-width="0.8"/>
+<circle cx="510.5" cy="282" r="11" fill="#FFFFFF" stroke="#666" stroke-width="1.5"/>
+<circle cx="570.0" cy="382" r="10" fill="#8DB255" stroke="#555" stroke-width="0.8"/>
+<circle cx="604.0" cy="382" r="10" fill="#8C8C88" stroke="#E08A1E" stroke-width="3"/>
+<circle cx="587.0" cy="332" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="638.0" cy="382" r="10" fill="#8C8C88" stroke="#555" stroke-width="0.8"/>
+<circle cx="672.0" cy="382" r="10" fill="#EEF1F4" stroke="#555" stroke-width="0.8"/>
+<circle cx="655.0" cy="332" r="11" fill="#FFFFFF" stroke="#666" stroke-width="1.5"/>
+<circle cx="621.0" cy="282" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="565.75" cy="232" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<text x="570" y="484" text-anchor="middle" font-size="12" fill="#666">vote</text>
+<rect x="518" y="492" width="104" height="28" rx="14" fill="#FFFFFF" stroke="#E08A1E" stroke-width="1.5"/>
+<circle cx="534" cy="506" r="6" fill="#8C8C88" stroke="#555" stroke-width="0.6"/>
+<text x="576" y="511" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Urban</text>
+<line x1="570" y1="520" x2="510.0" y2="574" stroke="#777" stroke-width="1.3" marker-end="url(#a)"/>
+<line x1="490" y1="132" x2="850" y2="166" stroke="#777" stroke-width="1.3" marker-end="url(#a)"/>
+<text x="850" y="186" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Tree n</text>
+<text x="850" y="204" text-anchor="middle" font-size="12" fill="#666">random pixels + bands</text>
+<line x1="782.0" y1="282" x2="765.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="782.0" y1="282" x2="799.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="839.375" y1="232" x2="782.0" y2="282" stroke="#AAA" stroke-width="1.3"/>
+<line x1="858.5" y1="332" x2="833.0" y2="382" stroke="#AAA" stroke-width="1.3"/>
+<line x1="884.0" y1="382" x2="867.0" y2="432" stroke="#E08A1E" stroke-width="3"/>
+<line x1="884.0" y1="382" x2="901.0" y2="432" stroke="#AAA" stroke-width="1.3"/>
+<line x1="858.5" y1="332" x2="884.0" y2="382" stroke="#E08A1E" stroke-width="3"/>
+<line x1="896.75" y1="282" x2="858.5" y2="332" stroke="#E08A1E" stroke-width="3"/>
+<line x1="896.75" y1="282" x2="935.0" y2="332" stroke="#AAA" stroke-width="1.3"/>
+<line x1="839.375" y1="232" x2="896.75" y2="282" stroke="#E08A1E" stroke-width="3"/>
+<circle cx="765.0" cy="332" r="10" fill="#2F5A2E" stroke="#555" stroke-width="0.8"/>
+<circle cx="799.0" cy="332" r="10" fill="#2C5F8A" stroke="#555" stroke-width="0.8"/>
+<circle cx="782.0" cy="282" r="11" fill="#FFFFFF" stroke="#666" stroke-width="1.5"/>
+<circle cx="833.0" cy="382" r="10" fill="#9A7650" stroke="#555" stroke-width="0.8"/>
+<circle cx="867.0" cy="432" r="10" fill="#8DB255" stroke="#E08A1E" stroke-width="3"/>
+<circle cx="901.0" cy="432" r="10" fill="#8C8C88" stroke="#555" stroke-width="0.8"/>
+<circle cx="884.0" cy="382" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="858.5" cy="332" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="935.0" cy="332" r="10" fill="#EEF1F4" stroke="#555" stroke-width="0.8"/>
+<circle cx="896.75" cy="282" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<circle cx="839.375" cy="232" r="11" fill="#FFFFFF" stroke="#E08A1E" stroke-width="2.5"/>
+<text x="850" y="484" text-anchor="middle" font-size="12" fill="#666">vote</text>
+<rect x="798" y="492" width="104" height="28" rx="14" fill="#FFFFFF" stroke="#E08A1E" stroke-width="1.5"/>
+<circle cx="814" cy="506" r="6" fill="#8DB255" stroke="#555" stroke-width="0.6"/>
+<text x="856" y="511" text-anchor="middle" font-size="13" font-weight="bold" fill="#222">Cropland</text>
+<line x1="850" y1="520" x2="580.0" y2="574" stroke="#777" stroke-width="1.3" marker-end="url(#a)"/>
+<text x="710" y="292" text-anchor="middle" font-size="28" fill="#888">…</text>
+<rect x="370" y="578" width="240" height="64" rx="8" fill="#FDF3E3" stroke="#E08A1E" stroke-width="1.5"/>
+<text x="490" y="603" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">Majority vote</text>
+<circle cx="420" cy="623" r="7" fill="#8DB255" stroke="#555" stroke-width="0.6"/>
+<text x="434" y="628" font-size="14" fill="#222">Cropland  (3 of 4 trees)</text>
+<text x="490.0" y="684" text-anchor="middle" font-size="12" fill="#666">Leaf colours = land cover class · orange = path followed by the input pixel</text>
+<circle cx="116.0" cy="712" r="8" fill="#2C5F8A" stroke="#555" stroke-width="0.8"/>
+<text x="130.0" y="717" font-size="13" fill="#222">Water</text>
+<circle cx="246.0" cy="712" r="8" fill="#2F5A2E" stroke="#555" stroke-width="0.8"/>
+<text x="260.0" y="717" font-size="13" fill="#222">Forest</text>
+<circle cx="376.0" cy="712" r="8" fill="#9A7650" stroke="#555" stroke-width="0.8"/>
+<text x="390.0" y="717" font-size="13" fill="#222">Bare soil</text>
+<circle cx="506.0" cy="712" r="8" fill="#8DB255" stroke="#555" stroke-width="0.8"/>
+<text x="520.0" y="717" font-size="13" fill="#222">Cropland</text>
+<circle cx="636.0" cy="712" r="8" fill="#8C8C88" stroke="#555" stroke-width="0.8"/>
+<text x="650.0" y="717" font-size="13" fill="#222">Urban</text>
+<circle cx="766.0" cy="712" r="8" fill="#EEF1F4" stroke="#555" stroke-width="0.8"/>
+<text x="780.0" y="717" font-size="13" fill="#222">Cloud / snow</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxMjExYzdiMS04NGViLTRhY2MtYmE0NS0zZDk4ODdhZWUyOGUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCFJqjSyWWUbxhVlijcr6b4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1M2Q1Yzk1Yi1mYzg0LTQ0NDUtOTNiZC1iN2QzNGRkZGI0MTJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoyuw2Bc4ZF6f/NFOMiRCu5gAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg9skof3aECAj3Koch+4EVOi97/iOfGOWWT4EXs0gk8zykZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJbiUYT+aitt8GXArT50UewAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIBIK47iIqeCEsyBCp/0JHgREX/9RcvglVyi2xZctIfYhZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GTOGZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjEyMTFjN2IxLTg0ZWItNGFjYy1iYTQ1LTNkOTg4N2FlZTI4ZS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjE0YjYzNWQ0LTFkNGItNDIwMC05MDM2LTNmOTU4NWZhMDMzZXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCD2ySh/doQICPcqhyH7gRU6L3v+I58Y5ZZPgRezSCTzPKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggmjUp4cBlGMZC+sgzdvgcdXyJzYL4E82BuczWLdIlqu+iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgglWWVqKyfE0yFGcYX8Vk6fKKD4b4qEPbCOXoiwlrU5NN0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQB92cYhDKENP/pjjTJywUSJfRgbwwlIDAh5NL6+WwohQCaDWk/ORc7vmILkh6k9AVq5kVUqVZMh0XhfSbHEi+lI=</c2pa:manifest></metadata></svg>

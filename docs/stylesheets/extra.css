@@ -25,3 +25,7 @@ mark.blue {
   color: #3777FF;
   font-weight: bold;
 }
+
+[data-md-color-scheme="slate"] img.invert-dark {
+  filter: invert(1) hue-rotate(180deg);
+}
